@@ -1,0 +1,2178 @@
+
+*** Running vivado
+    with args -log Top_Student.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Top_Student.tcl -notrace
+Command: synth_design -top Top_Student -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2508 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 387.758 ; gain = 101.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:13]
+	Parameter START bound to: 2'b00 
+	Parameter COLOUR bound to: 2'b01 
+	Parameter GAME bound to: 2'b10 
+	Parameter END bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'clk_changer' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/clk_change.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clk_changer' (1#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/clk_change.v:23]
+INFO: [Synth 8-6157] synthesizing module 'start_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/start_menu.v:23]
+WARNING: [Synth 8-6090] variable 'oled_data' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/start_menu.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'start_menu' (2#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/start_menu.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_x' does not match port width (7) of module 'start_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_y' does not match port width (7) of module 'start_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:48]
+INFO: [Synth 8-6157] synthesizing module 'colour_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/colour_menu.v:23]
+WARNING: [Synth 8-6090] variable 'oled_data' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/colour_menu.v:168]
+WARNING: [Synth 8-6014] Unused sequential element result_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/colour_menu.v:147]
+INFO: [Synth 8-6155] done synthesizing module 'colour_menu' (3#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/colour_menu.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_x' does not match port width (7) of module 'colour_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_y' does not match port width (7) of module 'colour_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:54]
+INFO: [Synth 8-6157] synthesizing module 'game_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/game_menu.v:23]
+	Parameter BALL_RADIUS bound to: 3 - type: integer 
+	Parameter LINE_COLOUR bound to: 16'b0000000000011111 
+WARNING: [Synth 8-6090] variable 'debouncer' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/game_menu.v:127]
+INFO: [Synth 8-6157] synthesizing module 'led_charging' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/led_charging.v:23]
+INFO: [Synth 8-6157] synthesizing module 'led_pwm' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/led_pwm.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'led_pwm' (4#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/led_pwm.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'led_charging' (5#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/led_charging.v:23]
+WARNING: [Synth 8-350] instance 'ledCharging' of module 'led_charging' requires 5 connections, but only 4 given [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/game_menu.v:143]
+INFO: [Synth 8-6157] synthesizing module 'charge_details' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/charge_details.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'charge_details' (6#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/charge_details.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ball_movement_system_top' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:4]
+	Parameter BALL_RADIUS bound to: 3 - type: integer 
+	Parameter WHITE bound to: 16'b1111111111111111 
+	Parameter RED bound to: 16'b1111100000000000 
+INFO: [Synth 8-6157] synthesizing module 'ball_tracking_system' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_tracking_system.v:23]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter STATIONARY_TIME bound to: 12500000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ball_tracking_system' (7#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_tracking_system.v:23]
+WARNING: [Synth 8-689] width (8) of port connection 'ball_y' does not match port width (7) of module 'ball_tracking_system' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:41]
+WARNING: [Synth 8-689] width (8) of port connection 'stationary_y' does not match port width (7) of module 'ball_tracking_system' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:44]
+INFO: [Synth 8-6157] synthesizing module 'map_generator' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:23]
+	Parameter TOP bound to: 2'b00 
+	Parameter BOTTOM bound to: 2'b01 
+	Parameter RIGHT bound to: 2'b10 
+	Parameter LEFT bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'randomiser' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/imports/Desktop/random_blob_generator/random_blob_generator.srcs/sources_1/new/randomiser.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'randomiser' (8#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/imports/Desktop/random_blob_generator/random_blob_generator.srcs/sources_1/new/randomiser.v:23]
+INFO: [Synth 8-6157] synthesizing module 'inside_map' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/inside_map.v:23]
+	Parameter THRESHOLD bound to: 100 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'inside_map' (9#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/inside_map.v:23]
+WARNING: [Synth 8-350] instance 'grid' of module 'inside_map' requires 5 connections, but only 4 given [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:65]
+INFO: [Synth 8-6157] synthesizing module 'unpack_obstacles' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/unpack_obstacles.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'unpack_obstacles' (10#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/unpack_obstacles.v:23]
+WARNING: [Synth 8-350] instance 'coll' of module 'unpack_obstacles' requires 6 connections, but only 4 given [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'map_generator' (11#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'horizontal_vertical_detect' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/vertical_horizontal_detect.v:7]
+	Parameter S_NONE bound to: 2'b00 
+	Parameter S_VERT bound to: 2'b01 
+	Parameter S_HORZ bound to: 2'b10 
+	Parameter BALL_RADIUS bound to: 3 - type: integer 
+WARNING: [Synth 8-689] width (7) of port connection 'y' does not match port width (6) of module 'unpack_obstacles' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/vertical_horizontal_detect.v:41]
+WARNING: [Synth 8-689] width (7) of port connection 'y' does not match port width (6) of module 'unpack_obstacles' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/vertical_horizontal_detect.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'horizontal_vertical_detect' (12#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/vertical_horizontal_detect.v:7]
+WARNING: [Synth 8-689] width (8) of port connection 'ball_y' does not match port width (7) of module 'horizontal_vertical_detect' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:80]
+INFO: [Synth 8-6157] synthesizing module 'collision_detector_enhanced' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/collision_detector_enhanced.v:22]
+	Parameter IDLE bound to: 2'b00 
+	Parameter BOUNCE bound to: 2'b01 
+	Parameter COOLDOWN bound to: 2'b10 
+	Parameter COOLDOWN_TIME bound to: 1000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'collision_detector_enhanced' (13#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/collision_detector_enhanced.v:22]
+WARNING: [Synth 8-689] width (8) of port connection 'ball_y' does not match port width (7) of module 'collision_detector_enhanced' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:94]
+INFO: [Synth 8-6157] synthesizing module 'ball_movement_controller' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:6]
+	Parameter BASE_MOVE_RATE bound to: 500000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'trig_calculator' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/trig_calculator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'trig_lut_first_quadrant' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/trig_lut_first_quadrant.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'trig_lut_first_quadrant' (14#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/trig_lut_first_quadrant.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'trig_calculator' (15#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/trig_calculator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'friction_area' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator/map_generator.srcs/sources_1/new/friction_area.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'friction_area' (16#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator/map_generator.srcs/sources_1/new/friction_area.v:23]
+INFO: [Synth 8-6157] synthesizing module 'friction_controller' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/friction_controller.v:26]
+	Parameter IDLE bound to: 2'b00 
+	Parameter COMPUTING bound to: 2'b01 
+	Parameter READY bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'friction_coulomb_q8_8' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/friction_coulomb_q8_8.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'friction_coulomb_q8_8' (17#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/friction_coulomb_q8_8.v:39]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/friction_controller.v:106]
+INFO: [Synth 8-6155] done synthesizing module 'friction_controller' (18#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/friction_controller.v:26]
+WARNING: [Synth 8-350] instance 'ball_in' of module 'inside_map' requires 5 connections, but only 4 given [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:136]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:254]
+INFO: [Synth 8-6155] done synthesizing module 'ball_movement_controller' (19#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:6]
+WARNING: [Synth 8-689] width (8) of port connection 'ball_y' does not match port width (7) of module 'ball_movement_controller' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:111]
+WARNING: [Synth 8-689] width (8) of port connection 'stationary_y' does not match port width (7) of module 'ball_movement_controller' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:118]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_display' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Users/user/Downloads/FDP.xpr/FDP/FDP.srcs/sources_1/new/sevenseg.v:25]
+INFO: [Synth 8-6157] synthesizing module 'ms_pulse' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ms_pulse.v:23]
+	Parameter DIV_COUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ms_pulse' (20#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ms_pulse.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Users/user/Downloads/FDP.xpr/FDP/FDP.srcs/sources_1/new/sevenseg.v:55]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Users/user/Downloads/FDP.xpr/FDP/FDP.srcs/sources_1/new/sevenseg.v:86]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_display' (21#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Users/user/Downloads/FDP.xpr/FDP/FDP.srcs/sources_1/new/sevenseg.v:25]
+INFO: [Synth 8-6157] synthesizing module 'ball_in_hole_detector' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/imports/end_hole_detect.v:18]
+	Parameter RADIUS bound to: 3 - type: integer 
+	Parameter NORMAL_COLOR bound to: 16'b1111111111111111 
+	Parameter HOLE_COLOR bound to: 16'b1111100000000000 
+	Parameter HOLE_RADIUS_SQ bound to: 16'b0000000000001001 
+	Parameter S_NOT_IN_HOLE bound to: 1'b0 
+	Parameter S_IN_HOLE bound to: 1'b1 
+INFO: [Synth 8-226] default block is never used [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/imports/end_hole_detect.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'ball_in_hole_detector' (22#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/imports/end_hole_detect.v:18]
+WARNING: [Synth 8-689] width (8) of port connection 'ball_y' does not match port width (7) of module 'ball_in_hole_detector' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:153]
+INFO: [Synth 8-6157] synthesizing module 'oled_graphics_renderer_debug' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/oled_graphics_renderer_debug.v:23]
+	Parameter WHITE bound to: 16'b1111111111111111 
+	Parameter GREEN bound to: 16'b0000011111100000 
+	Parameter RED bound to: 16'b1111100000000000 
+	Parameter BLACK bound to: 16'b0000000000000000 
+	Parameter BLUE bound to: 16'b0000000000011111 
+	Parameter YELLOW bound to: 16'b1111111111100000 
+	Parameter CYAN bound to: 16'b0000011111111111 
+	Parameter ORANGE bound to: 16'b1111110110000000 
+	Parameter MAGENTA bound to: 16'b1111100000011111 
+	Parameter PINK bound to: 16'b1111100001111111 
+WARNING: [Synth 8-350] instance 'xy' of module 'inside_map' requires 5 connections, but only 4 given [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/oled_graphics_renderer_debug.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'oled_graphics_renderer_debug' (23#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/oled_graphics_renderer_debug.v:23]
+WARNING: [Synth 8-689] width (8) of port connection 'ball_y' does not match port width (7) of module 'oled_graphics_renderer_debug' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:167]
+INFO: [Synth 8-6155] done synthesizing module 'ball_movement_system_top' (24#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_system_top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'secret_sequence' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/secret_sequence.v:3]
+	Parameter S0 bound to: 4'b0000 
+	Parameter S1 bound to: 4'b0001 
+	Parameter S2 bound to: 4'b0010 
+	Parameter S3 bound to: 4'b0011 
+	Parameter S4 bound to: 4'b0100 
+	Parameter S5 bound to: 4'b0101 
+	Parameter S6 bound to: 4'b0110 
+	Parameter S7 bound to: 4'b0111 
+	Parameter S8 bound to: 4'b1000 
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/debouncer.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (25#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/debouncer.v:5]
+INFO: [Synth 8-6157] synthesizing module 'seg_display_controller' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/seven_segment_chase.v:7]
+	Parameter SCANS_PER_STEP bound to: 12 - type: integer 
+	Parameter ALL_OFF bound to: 7'b1111111 
+	Parameter DASH_G bound to: 7'b1111110 
+	Parameter STEP_TICKS bound to: 20000000 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/seven_segment_chase.v:221]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/seven_segment_chase.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'seg_display_controller' (26#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/seven_segment_chase.v:7]
+WARNING: [Synth 8-350] instance 'sdc' of module 'seg_display_controller' requires 6 connections, but only 5 given [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/secret_sequence.v:106]
+INFO: [Synth 8-6155] done synthesizing module 'secret_sequence' (27#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/secret_sequence.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'game_menu' (28#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/game_menu.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_x' does not match port width (7) of module 'game_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:63]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_y' does not match port width (7) of module 'game_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:63]
+INFO: [Synth 8-6157] synthesizing module 'end_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/end_menu.v:23]
+WARNING: [Synth 8-6090] variable 'oled_data' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/end_menu.v:462]
+INFO: [Synth 8-6155] done synthesizing module 'end_menu' (29#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/end_menu.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_x' does not match port width (7) of module 'end_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:70]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_y' does not match port width (7) of module 'end_menu' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:70]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+	Parameter Width bound to: 96 - type: integer 
+	Parameter Height bound to: 64 - type: integer 
+	Parameter PixelCount bound to: 6144 - type: integer 
+	Parameter PixelCountWidth bound to: 13 - type: integer 
+	Parameter ClkFreq bound to: 6250000 - type: integer 
+	Parameter FrameFreq bound to: 60 - type: integer 
+	Parameter FrameDiv bound to: 104166 - type: integer 
+	Parameter FrameDivWidth bound to: 17 - type: integer 
+	Parameter PowerDelay bound to: 20 - type: integer 
+	Parameter ResetDelay bound to: 3 - type: integer 
+	Parameter VccEnDelay bound to: 20 - type: integer 
+	Parameter StartupCompleteDelay bound to: 100 - type: integer 
+	Parameter MaxDelay bound to: 100 - type: integer 
+	Parameter MaxDelayCount bound to: 625000 - type: integer 
+	Parameter StateCount bound to: 32 - type: integer 
+	Parameter StateWidth bound to: 5 - type: integer 
+	Parameter PowerUp bound to: 5'b00000 
+	Parameter Reset bound to: 5'b00001 
+	Parameter ReleaseReset bound to: 5'b00011 
+	Parameter EnableDriver bound to: 5'b00010 
+	Parameter DisplayOff bound to: 5'b00110 
+	Parameter SetRemapDisplayFormat bound to: 5'b00111 
+	Parameter SetStartLine bound to: 5'b00101 
+	Parameter SetOffset bound to: 5'b00100 
+	Parameter SetNormalDisplay bound to: 5'b01100 
+	Parameter SetMultiplexRatio bound to: 5'b01101 
+	Parameter SetMasterConfiguration bound to: 5'b01111 
+	Parameter DisablePowerSave bound to: 5'b01110 
+	Parameter SetPhaseAdjust bound to: 5'b01010 
+	Parameter SetDisplayClock bound to: 5'b01011 
+	Parameter SetSecondPrechargeA bound to: 5'b01001 
+	Parameter SetSecondPrechargeB bound to: 5'b01000 
+	Parameter SetSecondPrechargeC bound to: 5'b11000 
+	Parameter SetPrechargeLevel bound to: 5'b11001 
+	Parameter SetVCOMH bound to: 5'b11011 
+	Parameter SetMasterCurrent bound to: 5'b11010 
+	Parameter SetContrastA bound to: 5'b11110 
+	Parameter SetContrastB bound to: 5'b11111 
+	Parameter SetContrastC bound to: 5'b11101 
+	Parameter DisableScrolling bound to: 5'b11100 
+	Parameter ClearScreen bound to: 5'b10100 
+	Parameter VccEn bound to: 5'b10101 
+	Parameter DisplayOn bound to: 5'b10111 
+	Parameter PrepareNextFrame bound to: 5'b10110 
+	Parameter SetColAddress bound to: 5'b10010 
+	Parameter SetRowAddress bound to: 5'b10011 
+	Parameter WaitNextFrame bound to: 5'b10001 
+	Parameter SendPixel bound to: 5'b10000 
+	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
+	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (30#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:156' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (31#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:455]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:461]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (32#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (33#1) [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/Top_Student.v:13]
+WARNING: [Synth 8-3331] design end_menu has unconnected port PS2Clk
+WARNING: [Synth 8-3331] design end_menu has unconnected port PS2Data
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[25]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[24]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[23]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[21]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[20]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[18]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[17]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[16]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[13]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[12]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[10]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[9]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[5]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[3]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[2]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[1]
+WARNING: [Synth 8-3331] design friction_area has unconnected port map_seed[0]
+WARNING: [Synth 8-3331] design friction_area has unconnected port y[5]
+WARNING: [Synth 8-3331] design friction_area has unconnected port y[4]
+WARNING: [Synth 8-3331] design friction_area has unconnected port y[3]
+WARNING: [Synth 8-3331] design friction_area has unconnected port y[2]
+WARNING: [Synth 8-3331] design friction_area has unconnected port y[1]
+WARNING: [Synth 8-3331] design friction_area has unconnected port y[0]
+WARNING: [Synth 8-3331] design friction_area has unconnected port start[5]
+WARNING: [Synth 8-3331] design friction_area has unconnected port start[4]
+WARNING: [Synth 8-3331] design friction_area has unconnected port start[3]
+WARNING: [Synth 8-3331] design friction_area has unconnected port start[2]
+WARNING: [Synth 8-3331] design friction_area has unconnected port start[1]
+WARNING: [Synth 8-3331] design friction_area has unconnected port start[0]
+WARNING: [Synth 8-3331] design oled_graphics_renderer_debug has unconnected port in_hole
+WARNING: [Synth 8-3331] design oled_graphics_renderer_debug has unconnected port coll_state[1]
+WARNING: [Synth 8-3331] design oled_graphics_renderer_debug has unconnected port coll_state[0]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_x[7]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_x[6]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_x[5]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_x[4]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_x[3]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_x[2]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_x[1]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_x[0]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_y[6]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_y[5]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_y[4]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_y[3]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_y[2]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_y[1]
+WARNING: [Synth 8-3331] design collision_detector_enhanced has unconnected port ball_y[0]
+WARNING: [Synth 8-3331] design ball_movement_system_top has unconnected port clk_6p25mhz
+WARNING: [Synth 8-3331] design charge_details has unconnected port clk
+WARNING: [Synth 8-3331] design charge_details has unconnected port ball_clicked
+WARNING: [Synth 8-3331] design game_menu has unconnected port PS2Clk
+WARNING: [Synth 8-3331] design game_menu has unconnected port PS2Data
+WARNING: [Synth 8-3331] design colour_menu has unconnected port PS2Clk
+WARNING: [Synth 8-3331] design colour_menu has unconnected port PS2Data
+WARNING: [Synth 8-3331] design start_menu has unconnected port PS2Clk
+WARNING: [Synth 8-3331] design start_menu has unconnected port PS2Data
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 954.691 ; gain = 668.750
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin coll:start[12] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[11] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[10] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[9] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[8] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[7] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[6] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[5] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[4] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[3] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[2] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[1] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:start[0] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[12] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[11] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[10] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[9] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[8] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[7] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[6] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[5] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[4] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[3] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[2] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[1] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+WARNING: [Synth 8-3295] tying undriven pin coll:goal[0] to constant 0 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/map_generator end detect/map_generator.srcs/sources_1/new/map_generator.v:66]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 954.691 ; gain = 668.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 954.691 ; gain = 668.750
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Wes/Desktop/alm_done/FDP.srcs/constrs_1/new/my_constraints.xdc]
+Finished Parsing XDC File [C:/Users/Wes/Desktop/alm_done/FDP.srcs/constrs_1/new/my_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Wes/Desktop/alm_done/FDP.srcs/constrs_1/new/my_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 6457.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:03:42 ; elapsed = 00:04:10 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:42 ; elapsed = 00:04:10 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:42 ; elapsed = 00:04:10 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "oled_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "oled_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/charge_details.v:68]
+INFO: [Synth 8-5544] ROM "grid_counter0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'collision_detector_enhanced'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/friction_coulomb_q8_8.v:76]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/friction_coulomb_q8_8.v:76]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'friction_controller'
+INFO: [Synth 8-5544] ROM "vel_x_out" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "motion_tick" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "friction_ready" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element saved_speed_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:162]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:214]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:215]
+INFO: [Synth 8-802] inferred FSM for state register 'bounce_state_reg' in module 'ball_movement_controller'
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "pulse" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "pixelData" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "btn_db" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'secret_sequence'
+INFO: [Synth 8-5544] ROM "unlocked" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "oled_data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
+INFO: [Synth 8-5546] ROM "reset_bit_count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "busy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "read_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "load_tx_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2_clk_h" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_100us_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_20us_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_63clk_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'MouseCtl'
+INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reset_periodic_check_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "new_event" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                  BOUNCE |                              010 |                               01
+                COOLDOWN |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'collision_detector_enhanced'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+               COMPUTING |                              010 |                               01
+                   READY |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'friction_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE0 |                              010 |                               01
+                 iSTATE1 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'bounce_state_reg' using encoding 'one-hot' in module 'ball_movement_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      S0 |                             0000 |                             0000
+                      S1 |                             0001 |                             0001
+                      S2 |                             0010 |                             0010
+                      S3 |                             0011 |                             0011
+                      S4 |                             0100 |                             0100
+                      S5 |                             0101 |                             0101
+                      S6 |                             0110 |                             0110
+                      S7 |                             0111 |                             0111
+                      S8 |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'secret_sequence'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 PowerUp | 00000000100000000000000000000000 |                            00000
+                   Reset | 00000000000100000000000000000000 |                            00001
+            ReleaseReset | 00000000000000000000100000000000 |                            00011
+            EnableDriver | 00000000000000000001000000000000 |                            00010
+              DisplayOff | 00000000000000000100000000000000 |                            00110
+   SetRemapDisplayFormat | 00000100000000000000000000000000 |                            00111
+            SetStartLine | 00001000000000000000000000000000 |                            00101
+               SetOffset | 10000000000000000000000000000000 |                            00100
+        SetNormalDisplay | 00000000000000000000000010000000 |                            01100
+       SetMultiplexRatio | 00000000000000000000000000100000 |                            01101
+  SetMasterConfiguration | 00000000000000000000000001000000 |                            01111
+        DisablePowerSave | 00000000000000000000000000000100 |                            01110
+          SetPhaseAdjust | 00000000000000000000000000001000 |                            01010
+         SetDisplayClock | 00000000001000000000000000000000 |                            01011
+     SetSecondPrechargeA | 00000000010000000000000000000000 |                            01001
+     SetSecondPrechargeB | 01000000000000000000000000000000 |                            01000
+     SetSecondPrechargeC | 00000010000000000000000000000000 |                            11000
+       SetPrechargeLevel | 00000001000000000000000000000000 |                            11001
+                SetVCOMH | 00000000000000010000000000000000 |                            11011
+        SetMasterCurrent | 00000000000000100000000000000000 |                            11010
+            SetContrastA | 00000000000001000000000000000000 |                            11110
+            SetContrastB | 00100000000000000000000000000000 |                            11111
+            SetContrastC | 00000000000000000000000000000001 |                            11101
+        DisableScrolling | 00000000000000000000000000000010 |                            11100
+             ClearScreen | 00000000000000000000000000010000 |                            10100
+                   VccEn | 00010000000000000000000000000000 |                            10101
+               DisplayOn | 00000000000010000000000000000000 |                            10111
+        PrepareNextFrame | 00000000000000001000000000000000 |                            10110
+           SetColAddress | 00000000000000000000010000000000 |                            10010
+           SetRowAddress | 00000000000000000000000100000000 |                            10011
+           WaitNextFrame | 00000000000000000000001000000000 |                            10001
+               SendPixel | 00000000000000000010000000000000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                00000000000000001 |                            00000
+            rx_down_edge |                00000000000000010 |                            00011
+                rx_clk_l |                00000000000000100 |                            00010
+                rx_clk_h |                00000000000001000 |                            00001
+         rx_error_parity |                00000000000010000 |                            00100
+           rx_data_ready |                00000000000100000 |                            00101
+          tx_force_clk_l |                00000000001000000 |                            00110
+      tx_bring_data_down |                00000000010000000 |                            00111
+          tx_release_clk |                00000000100000000 |                            01000
+ tx_first_wait_down_edge |                00000001000000000 |                            01001
+                tx_clk_l |                00000010000000000 |                            01010
+         tx_wait_up_edge |                00000100000000000 |                            01011
+tx_wait_up_edge_before_ack |                00001000000000000 |                            01101
+             tx_wait_ack |                00010000000000000 |                            01110
+         tx_received_ack |                00100000000000000 |                            01111
+         tx_error_no_ack |                01000000000000000 |                            10000
+                tx_clk_h |                10000000000000000 |                            01100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Ps2Interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset | 0000000000000000000000000000000000001 |                           000000
+          reset_wait_ack | 0000000000000000000000000000000000010 |                           000001
+reset_wait_bat_completion | 0000000000000000000000000000000000100 |                           000010
+           reset_wait_id | 0000000000000000000000000000000001000 |                           000011
+reset_set_sample_rate_200 | 0000000000000000000000000000000010000 |                           000100
+reset_set_sample_rate_200_wait_ack | 0000000000000000000000000000000100000 |                           000101
+reset_send_sample_rate_200 | 0000000000000000000000000000001000000 |                           000110
+reset_send_sample_rate_200_wait_ack | 0000000000000000000000000000010000000 |                           000111
+reset_set_sample_rate_100 | 0000000000000000000000000000100000000 |                           001000
+reset_set_sample_rate_100_wait_ack | 0000000000000000000000000001000000000 |                           001001
+reset_send_sample_rate_100 | 0000000000000000000000000010000000000 |                           001010
+reset_send_sample_rate_100_wait_ack | 0000000000000000000000000100000000000 |                           001011
+reset_set_sample_rate_80 | 0000000000000000000000001000000000000 |                           001100
+reset_set_sample_rate_80_wait_ack | 0000000000000000000000010000000000000 |                           001101
+reset_send_sample_rate_80 | 0000000000000000000000100000000000000 |                           001110
+reset_send_sample_rate_80_wait_ack | 0000000000000000000001000000000000000 |                           001111
+           reset_read_id | 0000000000000000000010000000000000000 |                           010000
+  reset_read_id_wait_ack | 0000000000000000000100000000000000000 |                           010001
+   reset_read_id_wait_id | 0000000000000000001000000000000000000 |                           010010
+    reset_set_resolution | 0000000000000000010000000000000000000 |                           010011
+reset_set_resolution_wait_ack | 0000000000000000100000000000000000000 |                           010100
+   reset_send_resolution | 0000000000000001000000000000000000000 |                           010101
+reset_send_resolution_wait_ack | 0000000000000010000000000000000000000 |                           010110
+reset_set_sample_rate_40 | 0000000000000100000000000000000000000 |                           010111
+reset_set_sample_rate_40_wait_ack | 0000000000001000000000000000000000000 |                           011000
+reset_send_sample_rate_40 | 0000000000010000000000000000000000000 |                           011001
+reset_send_sample_rate_40_wait_ack | 0000000000100000000000000000000000000 |                           011010
+  reset_enable_reporting | 0000000001000000000000000000000000000 |                           011011
+reset_enable_reporting_wait_ack | 0000000010000000000000000000000000000 |                           011100
+             read_byte_1 | 0000000100000000000000000000000000000 |                           011101
+             read_byte_2 | 0000001000000000000000000000000000000 |                           011110
+             read_byte_3 | 0000010000000000000000000000000000000 |                           011111
+             read_byte_4 | 0000100000000000000000000000000000000 |                           100000
+          mark_new_event | 0001000000000000000000000000000000000 |                           100100
+           check_read_id | 0010000000000000000000000000000000000 |                           100001
+  check_read_id_wait_ack | 0100000000000000000000000000000000000 |                           100010
+   check_read_id_wait_id | 1000000000000000000000000000000000000 |                           100011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'MouseCtl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:00 ; elapsed = 00:04:31 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------------------+------------+----------+
+|      |RTL Partition                     |Replication |Instances |
++------+----------------------------------+------------+----------+
+|1     |inside_map                        |           4|      5344|
+|2     |map_generator__GC0                |           1|      6355|
+|3     |ball_movement_controller__GC0     |           1|     10339|
+|4     |oled_graphics_renderer_debug__GC0 |           1|      2977|
+|5     |ball_movement_system_top__GC0     |           1|     11356|
+|6     |game_menu__GC0                    |           1|      6780|
+|7     |Top_Student__GCB0                 |           1|     31905|
+|8     |Top_Student__GCB1                 |           1|     26602|
++------+----------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 33    
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 36    
+	   4 Input     16 Bit       Adders := 4     
+	   2 Input     16 Bit       Adders := 16    
+	   3 Input     14 Bit       Adders := 2     
+	   2 Input     14 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 70    
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 45    
+	   3 Input      7 Bit       Adders := 2     
+	   4 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 24    
+	   2 Input      6 Bit       Adders := 5     
+	   2 Input      5 Bit       Adders := 3     
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              176 Bit    Registers := 2     
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               28 Bit    Registers := 2     
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 19    
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 12    
+	                7 Bit    Registers := 21    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 89    
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   2 Input    176 Bit        Muxes := 3     
+	   2 Input     40 Bit        Muxes := 3     
+	  37 Input     37 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 69    
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input     22 Bit        Muxes := 30    
+	  32 Input     20 Bit        Muxes := 1     
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 19    
+	   4 Input     16 Bit        Muxes := 13    
+	   2 Input     16 Bit        Muxes := 439   
+	   8 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 14    
+	   7 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 2     
+	  18 Input     16 Bit        Muxes := 1     
+	   9 Input     16 Bit        Muxes := 1     
+	  12 Input     16 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 7     
+	   4 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 30    
+	   3 Input     13 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 10    
+	   2 Input     11 Bit        Muxes := 2     
+	   8 Input     10 Bit        Muxes := 2     
+	   8 Input      9 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 13    
+	  37 Input      8 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 41    
+	  18 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 9     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 8     
+	   3 Input      5 Bit        Muxes := 1     
+	  18 Input      5 Bit        Muxes := 1     
+	  32 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 11    
+	   9 Input      4 Bit        Muxes := 3     
+	  37 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 11    
+	   3 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 5     
+	  15 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 7     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 98    
+	   3 Input      1 Bit        Muxes := 17    
+	   5 Input      1 Bit        Muxes := 2     
+	  15 Input      1 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 2     
+	  17 Input      1 Bit        Muxes := 4     
+	  37 Input      1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Top_Student 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   5 Input     16 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module inside_map 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 8     
+	   4 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+Module clk_changer__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module randomiser 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+Module unpack_obstacles__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 4     
+Module map_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              176 Bit    Registers := 2     
+	               28 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input    176 Bit        Muxes := 3     
+	   2 Input     13 Bit        Muxes := 8     
+	   3 Input     13 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+Module trig_lut_first_quadrant__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input     10 Bit        Muxes := 1     
+	   8 Input      9 Bit        Muxes := 1     
+Module trig_calculator__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+Module trig_lut_first_quadrant 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input     10 Bit        Muxes := 1     
+	   8 Input      9 Bit        Muxes := 1     
+Module trig_calculator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+Module friction_area__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      7 Bit       Adders := 1     
+	   4 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module friction_coulomb_q8_8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 4     
+Module friction_controller 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 4     
+Module ball_movement_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 8     
++---Registers : 
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 30    
+	   2 Input     16 Bit        Muxes := 28    
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 38    
+	   3 Input      1 Bit        Muxes := 8     
+	   5 Input      1 Bit        Muxes := 1     
+Module unpack_obstacles__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 4     
+Module friction_area 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      7 Bit       Adders := 1     
+	   4 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module oled_graphics_renderer_debug 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     14 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input     11 Bit        Muxes := 1     
+Module ball_tracking_system 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module unpack_obstacles__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 4     
+Module unpack_obstacles__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 4     
+Module unpack_obstacles__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 4     
+Module unpack_obstacles 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 4     
+Module horizontal_vertical_detect 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module collision_detector_enhanced 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 4     
+Module ms_pulse 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module sevenseg_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+Module ball_in_hole_detector 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module led_pwm__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm__15 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_pwm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module led_charging 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 15    
++---Registers : 
+	               32 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 31    
+Module charge_details 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 1     
+Module debouncer__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module seg_display_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	  18 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	  15 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  15 Input      1 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 1     
+Module secret_sequence 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+Module game_menu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 9     
+Module clk_changer__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module clk_changer__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module clk_changer__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module clk_changer 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module end_menu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 6     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     16 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 286   
+	   3 Input     16 Bit        Muxes := 13    
+	   4 Input     16 Bit        Muxes := 9     
+	   7 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	  18 Input     16 Bit        Muxes := 1     
+	   9 Input     16 Bit        Muxes := 1     
+	  12 Input     16 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 1     
+	   3 Input     13 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 8     
+	  18 Input      5 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 7     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module Ps2Interface 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 18    
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  17 Input      1 Bit        Muxes := 4     
+Module MouseCtl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	  37 Input     37 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 69    
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 10    
+	   2 Input      9 Bit        Muxes := 2     
+	  37 Input      8 Bit        Muxes := 3     
+	  37 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  37 Input      1 Bit        Muxes := 20    
+Module Oled_Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module colour_menu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 6     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 74    
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 3     
+	   4 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module start_menu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 6     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 27    
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "clk6p25mhz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk25mhz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk100hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk10khz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP area21, operation Mode is: A*B.
+DSP Report: operator area21 is absorbed into DSP area21.
+DSP Report: Generating DSP area20, operation Mode is: C+A*B.
+DSP Report: operator area20 is absorbed into DSP area20.
+DSP Report: operator area21 is absorbed into DSP area20.
+DSP Report: Generating DSP area20, operation Mode is: ((D:0x3e8)+A)*B.
+DSP Report: operator area20 is absorbed into DSP area20.
+DSP Report: operator r2 is absorbed into DSP area20.
+DSP Report: Generating DSP area31, operation Mode is: A*B.
+DSP Report: operator area31 is absorbed into DSP area31.
+DSP Report: Generating DSP area30, operation Mode is: C+A*B.
+DSP Report: operator area30 is absorbed into DSP area30.
+DSP Report: operator area31 is absorbed into DSP area30.
+DSP Report: Generating DSP area30, operation Mode is: ((D:0x3e8)+A)*B.
+DSP Report: operator area30 is absorbed into DSP area30.
+DSP Report: operator r3 is absorbed into DSP area30.
+DSP Report: Generating DSP area41, operation Mode is: A*B.
+DSP Report: operator area41 is absorbed into DSP area41.
+DSP Report: Generating DSP area40, operation Mode is: C+A*B.
+DSP Report: operator area40 is absorbed into DSP area40.
+DSP Report: operator area41 is absorbed into DSP area40.
+DSP Report: Generating DSP area40, operation Mode is: ((D:0x3e8)+A)*B.
+DSP Report: operator area40 is absorbed into DSP area40.
+DSP Report: operator r4 is absorbed into DSP area40.
+DSP Report: Generating DSP area11, operation Mode is: A*B.
+DSP Report: operator area11 is absorbed into DSP area11.
+DSP Report: Generating DSP area10, operation Mode is: C+A*B.
+DSP Report: operator area10 is absorbed into DSP area10.
+DSP Report: operator area11 is absorbed into DSP area10.
+DSP Report: Generating DSP area10, operation Mode is: ((D:0x3e8)+A)*B.
+DSP Report: operator area10 is absorbed into DSP area10.
+DSP Report: operator r1 is absorbed into DSP area10.
+INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:214]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:214]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:214]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:215]
+DSP Report: Generating DSP scaled_vx_reg, operation Mode is: (A2*B)'.
+DSP Report: register A is absorbed into DSP scaled_vx_reg.
+DSP Report: register scaled_vx_reg is absorbed into DSP scaled_vx_reg.
+DSP Report: operator scaled_vx0 is absorbed into DSP scaled_vx_reg.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x1f).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1f).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x1e).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1e).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x1d).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1d).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x1c).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1c).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x1b).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1b).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x1a).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1a).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x19).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x19).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x18).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x18).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x17).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x17).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x16).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x16).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x15).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x15).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x14).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x14).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x13).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x13).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x12).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x12).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_cos_val4, operation Mode is: A*(B:0x11).
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val4.
+DSP Report: Generating DSP scaled_cos_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x11).
+DSP Report: operator scaled_cos_val2 is absorbed into DSP scaled_cos_val1.
+DSP Report: operator scaled_cos_val4 is absorbed into DSP scaled_cos_val1.
+DSP Report: Generating DSP scaled_vy_reg, operation Mode is: (A2*B)'.
+DSP Report: register A is absorbed into DSP scaled_vy_reg.
+DSP Report: register scaled_vy_reg is absorbed into DSP scaled_vy_reg.
+DSP Report: operator scaled_vy0 is absorbed into DSP scaled_vy_reg.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x1f).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1f).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x1e).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1e).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x1d).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1d).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x1c).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1c).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x1b).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1b).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x1a).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x1a).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x19).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x19).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x18).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x18).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x17).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x17).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x16).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x16).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x15).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x15).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x14).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x14).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x13).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x13).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x12).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x12).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP scaled_sin_val4, operation Mode is: A*(B:0x11).
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val4.
+DSP Report: Generating DSP scaled_sin_val1, operation Mode is: ((C:0xf) or 0)+A*(B:0x11).
+DSP Report: operator scaled_sin_val2 is absorbed into DSP scaled_sin_val1.
+DSP Report: operator scaled_sin_val4 is absorbed into DSP scaled_sin_val1.
+DSP Report: Generating DSP dist_sq0, operation Mode is: A*B.
+DSP Report: operator dist_sq0 is absorbed into DSP dist_sq0.
+DSP Report: Generating DSP dist_sq, operation Mode is: C+A*B.
+DSP Report: operator dist_sq is absorbed into DSP dist_sq.
+DSP Report: operator dist_sq0 is absorbed into DSP dist_sq.
+INFO: [Synth 8-5545] ROM "refresh_div/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "refresh_div/pulse" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP sub_sector2, operation Mode is: A*(B:0x1f7).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is: A*(B:0x64).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is: A*(B:0xf1).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is: A*(B:0x96).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is: A*(B:0x64).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is: A*(B:0x43).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is: A*(B:0x29).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is: A*(B:0x14).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+INFO: [Synth 8-5546] ROM "db_L/btn_db" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "db_R/btn_db" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/game_menu.v:83]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/game_menu.v:83]
+DSP Report: Generating DSP oled_data3, operation Mode is: A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is: A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is: A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is: A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+INFO: [Synth 8-5544] ROM "oled_data1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "oled_data1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element mouse_control/zpos_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:1011]
+WARNING: [Synth 8-6014] Unused sequential element mouse_control/middle_down_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element mouse_control/middle_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element mouse_control/right_down_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:427]
+WARNING: [Synth 8-6014] Unused sequential element mouse_control/right_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:427]
+WARNING: [Synth 8-6014] Unused sequential element mouse_control/new_event_reg was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:610]
+INFO: [Synth 8-5545] ROM "mouse_control/periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "mouse_control/timeout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clk25mhz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk6p25mhz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk100hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk10khz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "oled_data" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP oled_data3, operation Mode is: A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data2, operation Mode is: C+A*B.
+DSP Report: operator oled_data2 is absorbed into DSP oled_data2.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data2.
+INFO: [Synth 8-5546] ROM "oled_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "oled_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "oled_disp/fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "oled_disp/fsm_next_state0" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ball_ctrli_3/\FRICTION_EPS_reg[0] )
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[1]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[2]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[3]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[4]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[5]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[6]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[7]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[8]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[9]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[10]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[11]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[12]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[13]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[14]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_EPS_reg[15]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[3]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[4]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[5]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[6]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[7]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[8]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[9]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[10]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[11]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[12]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[13]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ball_ctrli_3/FRICTION_A_reg[14]' (FD) to 'ball_ctrli_3/FRICTION_A_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ball_ctrli_3/\FRICTION_A_reg[15] )
+INFO: [Synth 8-3886] merging instance 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[26]' (FDCE) to 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[27]' (FDCE) to 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[24]' (FDCE) to 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[25]' (FDCE) to 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[31]' (FDCE) to 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[30]'
+INFO: [Synth 8-3886] merging instance 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[30]' (FDCE) to 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[29]'
+INFO: [Synth 8-3886] merging instance 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[28]' (FDCE) to 'ballMovementSystemTopi_5/tracker/stationary_counter_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ballMovementSystemTopi_5/\tracker/stationary_counter_reg[29] )
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/release_y_reg[7]' (FDE) to 'gameMenui_6/release_x_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gameMenui_6/\release_x_reg[7] )
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[14]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[15]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[15]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[16]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[16]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[17]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[17]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[18]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[18]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[19]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[19]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[20]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[20]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[21]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[21]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[22]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[22]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[23]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[23]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[24]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[24]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[25]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[25]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[26]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[26]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[27]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[27]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[28]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[28]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[29]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[29]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[30]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/ledCharging/power_reg[30]' (FDRE) to 'gameMenui_6/ledCharging/power_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gameMenui_6/ledCharging/\power_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (power_reg[31]) is unused and will be removed from module led_charging.
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[0]' (FDRE) to 'i_0/mouse_control/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[1]' (FDRE) to 'i_0/mouse_control/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[2]' (FDRE) to 'i_0/mouse_control/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[3]' (FDRE) to 'i_0/mouse_control/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[4]' (FDRE) to 'i_0/mouse_control/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[5]' (FDRE) to 'i_0/mouse_control/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[6]' (FDSE) to 'i_0/mouse_control/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[7]' (FDSE) to 'i_0/mouse_control/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[8]' (FDSE) to 'i_0/mouse_control/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[9]' (FDSE) to 'i_0/mouse_control/y_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[10]' (FDRE) to 'i_0/mouse_control/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/x_max_reg[11]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[0]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[1]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[2]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[3]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[4]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[5]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[6]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[7]' (FDSE) to 'i_0/mouse_control/y_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[8]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse_control/y_max_reg[10]' (FDRE) to 'i_0/mouse_control/y_max_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\mouse_control/y_max_reg[11] )
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/u_secret/sdc/scans_accum_reg[4]' (FDCE) to 'gameMenui_6/u_secret/sdc/scans_accum_reg[7]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/u_secret/sdc/scans_accum_reg[5]' (FDCE) to 'gameMenui_6/u_secret/sdc/scans_accum_reg[7]'
+INFO: [Synth 8-3886] merging instance 'gameMenui_6/u_secret/sdc/scans_accum_reg[6]' (FDCE) to 'gameMenui_6/u_secret/sdc/scans_accum_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gameMenui_6/u_secret/\sdc/scans_accum_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (sdc/scans_accum_reg[7]) is unused and will be removed from module secret_sequence.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:16:20 ; elapsed = 00:17:37 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 130, Available = 90. Use report_utilization command for details.
+DSP Report: Generating DSP area20, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area20 is absorbed into DSP area20.
+DSP Report: operator r2 is absorbed into DSP area20.
+DSP Report: Generating DSP area30, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area30 is absorbed into DSP area30.
+DSP Report: operator r3 is absorbed into DSP area30.
+DSP Report: Generating DSP area40, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area40 is absorbed into DSP area40.
+DSP Report: operator r4 is absorbed into DSP area40.
+DSP Report: Generating DSP area10, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area10 is absorbed into DSP area10.
+DSP Report: operator r1 is absorbed into DSP area10.
+DSP Report: Generating DSP area20, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area20 is absorbed into DSP area20.
+DSP Report: operator r2 is absorbed into DSP area20.
+DSP Report: Generating DSP area30, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area30 is absorbed into DSP area30.
+DSP Report: operator r3 is absorbed into DSP area30.
+DSP Report: Generating DSP area40, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area40 is absorbed into DSP area40.
+DSP Report: operator r4 is absorbed into DSP area40.
+DSP Report: Generating DSP area10, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area10 is absorbed into DSP area10.
+DSP Report: operator r1 is absorbed into DSP area10.
+DSP Report: Generating DSP area20, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area20 is absorbed into DSP area20.
+DSP Report: operator r2 is absorbed into DSP area20.
+DSP Report: Generating DSP area30, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area30 is absorbed into DSP area30.
+DSP Report: operator r3 is absorbed into DSP area30.
+DSP Report: Generating DSP area40, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area40 is absorbed into DSP area40.
+DSP Report: operator r4 is absorbed into DSP area40.
+DSP Report: Generating DSP area10, operation Mode is (post resource management): ((D:0x3e8)+A)*B.
+DSP Report: operator area10 is absorbed into DSP area10.
+DSP Report: operator r1 is absorbed into DSP area10.
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:215]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [C:/Users/Wes/Desktop/alm_done/FDP.srcs/sources_1/new/ball_movement_controller.v:214]
+DSP Report: Generating DSP scaled_vx_reg, operation Mode is (post resource management): (A2*B)'.
+DSP Report: register A is absorbed into DSP scaled_vx_reg.
+DSP Report: register scaled_vx_reg is absorbed into DSP scaled_vx_reg.
+DSP Report: operator scaled_vx0 is absorbed into DSP scaled_vx_reg.
+DSP Report: Generating DSP scaled_vy_reg, operation Mode is (post resource management): (A2*B)'.
+DSP Report: register A is absorbed into DSP scaled_vy_reg.
+DSP Report: register scaled_vy_reg is absorbed into DSP scaled_vy_reg.
+DSP Report: operator scaled_vy0 is absorbed into DSP scaled_vy_reg.
+DSP Report: Generating DSP sub_sector2, operation Mode is (post resource management): A*(B:0x1f7).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is (post resource management): A*(B:0x64).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is (post resource management): A*(B:0xf1).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is (post resource management): A*(B:0x96).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is (post resource management): A*(B:0x64).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP sub_sector2, operation Mode is (post resource management): A*(B:0x43).
+DSP Report: operator sub_sector2 is absorbed into DSP sub_sector2.
+DSP Report: Generating DSP oled_data3, operation Mode is (post resource management): A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is (post resource management): A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is (post resource management): A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is (post resource management): A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++-----------------------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping               | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|inside_map                   | A*B                       | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|inside_map                   | C+A*B                     | 16     | 16     | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|inside_map                   | ((D:0x3e8)+A)*B           | 9      | 11     | -      | 10     | 22     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|inside_map                   | A*B                       | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|inside_map                   | C+A*B                     | 16     | 16     | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|inside_map                   | ((D:0x3e8)+A)*B           | 9      | 11     | -      | 10     | 22     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|inside_map                   | A*B                       | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|inside_map                   | C+A*B                     | 16     | 16     | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|inside_map                   | ((D:0x3e8)+A)*B           | 9      | 11     | -      | 10     | 22     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|inside_map                   | A*B                       | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|inside_map                   | C+A*B                     | 16     | 16     | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|inside_map                   | ((D:0x3e8)+A)*B           | 9      | 11     | -      | 10     | 22     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|Top_Student                  | (A2*B)'                   | 17     | 16     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|ball_movement_controller     | A*(B:0x1f)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1f) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1e)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1e) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1d)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1d) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1c)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1c) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1b)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1b) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1a)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1a) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x19)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x19) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x18)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x18) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x17)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x17) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x16)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x16) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x15)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x15) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x14)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x14) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x13)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x13) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x12)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x12) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x11)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x11) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Top_Student                  | (A2*B)'                   | 17     | 16     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|ball_movement_controller     | A*(B:0x1f)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1f) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1e)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1e) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1d)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1d) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1c)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1c) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1b)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1b) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x1a)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x1a) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x19)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x19) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x18)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x18) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x17)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x17) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x16)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x16) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x15)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x15) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x14)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x14) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x13)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x13) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x12)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x12) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | A*(B:0x11)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ball_movement_controller     | ((C:0xf) or 0)+A*(B:0x11) | 16     | 6      | 5      | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|oled_graphics_renderer_debug | A*B                       | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|oled_graphics_renderer_debug | C+A*B                     | 14     | 14     | 14     | -      | 14     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|charge_details               | A*(B:0x1f7)               | 16     | 10     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|charge_details               | A*(B:0x64)                | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|charge_details               | A*(B:0xf1)                | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|charge_details               | A*(B:0x96)                | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|charge_details               | A*(B:0x64)                | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|charge_details               | A*(B:0x43)                | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|charge_details               | A*(B:0x29)                | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|charge_details               | A*(B:0x14)                | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student                  | A*B                       | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student                  | (PCIN>>17)+A*B            | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student                  | A*B                       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student                  | (PCIN>>17)+A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student                  | A*B                       | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student                  | (PCIN>>17)+A*B            | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student                  | A*B                       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student                  | (PCIN>>17)+A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|colour_menu                  | A*B                       | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|colour_menu                  | C+A*B                     | 14     | 14     | 14     | -      | 14     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-----------------------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------------------+------------+----------+
+|      |RTL Partition                     |Replication |Instances |
++------+----------------------------------+------------+----------+
+|1     |inside_map                        |           1|      5338|
+|2     |map_generator__GC0                |           1|      3436|
+|3     |ball_movement_controller__GC0     |           1|      7954|
+|4     |oled_graphics_renderer_debug__GC0 |           1|      2422|
+|5     |ball_movement_system_top__GC0     |           1|      5715|
+|6     |game_menu__GC0                    |           1|      3726|
+|7     |Top_Student__GCB0                 |           1|     10372|
+|8     |Top_Student__GCB1                 |           1|     10664|
+|9     |inside_map__1                     |           1|      5055|
+|10    |inside_map__2                     |           2|      5067|
++------+----------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:16:45 ; elapsed = 00:18:06 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:16:49 ; elapsed = 00:18:11 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------------------+------------+----------+
+|      |RTL Partition                     |Replication |Instances |
++------+----------------------------------+------------+----------+
+|1     |inside_map                        |           1|      5338|
+|2     |map_generator__GC0                |           1|      3436|
+|3     |ball_movement_controller__GC0     |           1|      7954|
+|4     |oled_graphics_renderer_debug__GC0 |           1|      2422|
+|5     |ball_movement_system_top__GC0     |           1|      5715|
+|6     |game_menu__GC0                    |           1|      3726|
+|7     |Top_Student__GCB0                 |           1|     10372|
+|8     |Top_Student__GCB1                 |           1|     10664|
+|9     |inside_map__1                     |           1|      5055|
+|10    |inside_map__2                     |           2|      5067|
++------+----------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'colourMenu/prev_mouse_left_reg' (FD) to 'startMenu/prev_mouse_left_reg'
+INFO: [Synth 8-3886] merging instance 'endMenu/prev_mouse_left_reg' (FD) to 'startMenu/prev_mouse_left_reg'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:17:07 ; elapsed = 00:18:30 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop mouse_control/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to mouse_control/Inst_Ps2Interface/ps2_clk_h_reg_inv.
+INFO: [Synth 8-5365] Flop mouse_control/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to mouse_control/Inst_Ps2Interface/ps2_data_h_reg_inv.
+INFO: [Synth 8-6064] Net \gameMenu/chargeDetails/sel0 [15] is driving 75 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:17:12 ; elapsed = 00:18:35 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:17:12 ; elapsed = 00:18:35 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:17:15 ; elapsed = 00:18:38 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:17:16 ; elapsed = 00:18:39 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:17:17 ; elapsed = 00:18:40 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:17:17 ; elapsed = 00:18:40 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     5|
+|2     |CARRY4    |  3016|
+|3     |DSP48E1   |    16|
+|4     |DSP48E1_2 |    12|
+|5     |DSP48E1_3 |     2|
+|6     |LUT1      |   865|
+|7     |LUT2      |  3104|
+|8     |LUT3      |  5743|
+|9     |LUT4      |  2494|
+|10    |LUT5      |  3252|
+|11    |LUT6      |  7558|
+|12    |MUXF7     |   617|
+|13    |MUXF8     |   223|
+|14    |FDCE      |   136|
+|15    |FDE_1     |    32|
+|16    |FDPE      |    10|
+|17    |FDRE      |  1569|
+|18    |FDSE      |    37|
+|19    |IBUF      |    22|
+|20    |IOBUF     |     2|
+|21    |OBUF      |    34|
+|22    |OBUFT     |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------------+-----------------------------+------+
+|      |Instance                  |Module                       |Cells |
++------+--------------------------+-----------------------------+------+
+|1     |top                       |                             | 28750|
+|2     |  clk100hz                |clk_changer                  |    54|
+|3     |  clk10khz                |clk_changer_0                |    53|
+|4     |  clk25mhz                |clk_changer_1                |    50|
+|5     |  clk6p25mhz              |clk_changer_2                |    51|
+|6     |  colourMenu              |colour_menu                  |   206|
+|7     |  endMenu                 |end_menu                     |    35|
+|8     |  gameMenu                |game_menu                    | 17722|
+|9     |    ballMovementSystemTop |ball_movement_system_top     | 16264|
+|10    |      ball_ctrl           |ball_movement_controller     |  6042|
+|11    |        ball_in           |inside_map_22                |  2286|
+|12    |        friction_ctrl     |friction_controller          |   317|
+|13    |          friction_inst   |friction_coulomb_q8_8        |   147|
+|14    |      coll_det            |horizontal_vertical_detect   |     6|
+|15    |      collision_calc      |collision_detector_enhanced  |   161|
+|16    |      detector            |ball_in_hole_detector        |   139|
+|17    |      display             |sevenseg_display             |   202|
+|18    |        refresh_div       |ms_pulse                     |    53|
+|19    |      map_gen             |map_generator                |  7308|
+|20    |        R1                |randomiser                   |    29|
+|21    |        clk100k           |clk_changer_19               |    63|
+|22    |        goal_map          |inside_map_20                |  2257|
+|23    |        grid              |inside_map_21                |  2677|
+|24    |      renderer            |oled_graphics_renderer_debug |  2291|
+|25    |        fric              |friction_area                |    19|
+|26    |        obs               |unpack_obstacles             |    28|
+|27    |        xy                |inside_map                   |  2207|
+|28    |      tracker             |ball_tracking_system         |   115|
+|29    |    chargeDetails         |charge_details               |   335|
+|30    |    ledCharging           |led_charging                 |   819|
+|31    |      pwm0                |led_pwm                      |    58|
+|32    |      pwm1                |led_pwm_4                    |    28|
+|33    |      pwm10               |led_pwm_5                    |    30|
+|34    |      pwm11               |led_pwm_6                    |    36|
+|35    |      pwm12               |led_pwm_7                    |    31|
+|36    |      pwm13               |led_pwm_8                    |    28|
+|37    |      pwm14               |led_pwm_9                    |    36|
+|38    |      pwm15               |led_pwm_10                   |    29|
+|39    |      pwm2                |led_pwm_11                   |    32|
+|40    |      pwm3                |led_pwm_12                   |    36|
+|41    |      pwm4                |led_pwm_13                   |    29|
+|42    |      pwm5                |led_pwm_14                   |    35|
+|43    |      pwm6                |led_pwm_15                   |    53|
+|44    |      pwm7                |led_pwm_16                   |    32|
+|45    |      pwm8                |led_pwm_17                   |    32|
+|46    |      pwm9                |led_pwm_18                   |    37|
+|47    |    u_secret              |secret_sequence              |   150|
+|48    |      db_L                |debouncer                    |    39|
+|49    |      db_R                |debouncer_3                  |    38|
+|50    |      sdc                 |seg_display_controller       |    64|
+|51    |  mouse_control           |MouseCtl                     |  1447|
+|52    |    Inst_Ps2Interface     |Ps2Interface                 |   272|
+|53    |  oled_disp               |Oled_Display                 |  7644|
+|54    |  startMenu               |start_menu                   |    32|
++------+--------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:17:17 ; elapsed = 00:18:40 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:13:43 ; elapsed = 00:15:00 . Memory (MB): peak = 6457.324 ; gain = 668.750
+Synthesis Optimization Complete : Time (s): cpu = 00:17:17 ; elapsed = 00:18:41 . Memory (MB): peak = 6457.324 ; gain = 6171.383
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3942 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 34 instances were transformed.
+  FDE_1 => FDRE (inverted pins: C): 32 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+310 Infos, 138 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:17:26 ; elapsed = 00:18:50 . Memory (MB): peak = 6457.324 ; gain = 6184.410
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Wes/Desktop/alm_done/FDP.runs/synth_1/Top_Student.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 6457.324 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 6457.324 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  8 23:38:34 2025...

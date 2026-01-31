@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Nov  8 23:07:26 2025
+# Process ID: 5136
+# Current directory: C:/Users/Wes/Desktop/alm_done
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1608 C:\Users\Wes\Desktop\alm_done\FDP.xpr
+# Log file: C:/Users/Wes/Desktop/alm_done/vivado.log
+# Journal file: C:/Users/Wes/Desktop/alm_done\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Wes/Desktop/alm_done/FDP.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/user/Downloads/PrjAr/_X_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 788.281 ; gain = 86.500
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Sat Nov  8 23:14:12 2025] Launched synth_1...
+Run output will be captured here: C:/Users/Wes/Desktop/alm_done/FDP.runs/synth_1/runme.log
+[Sat Nov  8 23:14:12 2025] Launched impl_1...
+Run output will be captured here: C:/Users/Wes/Desktop/alm_done/FDP.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Sat Nov  8 23:19:26 2025] Launched synth_1...
+Run output will be captured here: C:/Users/Wes/Desktop/alm_done/FDP.runs/synth_1/runme.log
+[Sat Nov  8 23:19:26 2025] Launched impl_1...
+Run output will be captured here: C:/Users/Wes/Desktop/alm_done/FDP.runs/impl_1/runme.log
+archive_project C:/Users/Wes/Desktop/Basically_complete.xpr.zip -temp_dir C:/Users/Wes/Desktop/alm_done/.Xil/Vivado-5136-WIN-PQ168B1S1K5 -force -include_local_ip_cache
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/Wes/Desktop/alm_done/.Xil/Vivado-5136-WIN-PQ168B1S1K5' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
